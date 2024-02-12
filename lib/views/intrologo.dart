@@ -18,7 +18,7 @@ class _IntroLogoState extends State<IntroLogo> {
   }
 
   void _changeTheStateToMainIntro() {
-    Timer(Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (context) => const MainIntroPage()),
       );
@@ -27,9 +27,7 @@ class _IntroLogoState extends State<IntroLogo> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.black,
-      body: Center(
+    return  Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -50,7 +48,6 @@ class _IntroLogoState extends State<IntroLogo> {
             ),
           ],
         ),
-      ),
     );
   }
 }

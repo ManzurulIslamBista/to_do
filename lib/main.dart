@@ -21,7 +21,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Color(000000)),
         useMaterial3: true,
       ),
-      home: const IntroLogo(),
+      home: Scaffold(
+        backgroundColor: Colors.black,
+        body: const IntroLogo(),
+      ),
     );
   }
 }
