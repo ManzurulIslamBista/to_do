@@ -40,6 +40,11 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  cupertino_icons: ^1.0.2
+  sqflite:
+  uuid: ^3.0.6
+  provider: ^6.1.1
+  path_provider: ^2.0.15
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -61,10 +66,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/Group 151.svg
-    - assets/images/Frame 161.png
-    - assets/images/Frame 162.png
-    - assets/images/Group 182.png
+    - assets/images/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

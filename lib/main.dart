@@ -1,11 +1,19 @@
 import 'dart:async';
-
+import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
+import 'package:to_do/providers/sql_helper.dart';
 import 'package:to_do/views/intrologo.dart';
 import 'package:to_do/views/main_intro_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => SQLProvider()),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -18,13 +26,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // title: '',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Color(000000)),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF121212)),
         useMaterial3: true,
       ),
-      home: Scaffold(
-        backgroundColor: Colors.black,
-        body: const IntroLogo(),
-      ),
+      home: IntroLogo(),
     );
   }
 }

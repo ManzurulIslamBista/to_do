@@ -2,6 +2,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:to_do/views/main_intro_page.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
 
 class IntroLogo extends StatefulWidget {
   const IntroLogo({Key? key}) : super(key: key);
@@ -27,27 +31,31 @@ class _IntroLogoState extends State<IntroLogo> {
 
   @override
   Widget build(BuildContext context) {
-    return  Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SvgPicture.asset(
-              'assets/images/Group 151.svg',
-              semanticsLabel: 'uptodo SVG Image',
-              height: 150,
-              width: 100,
-            ),
-            const SizedBox(height: 10), // Adding some space between SVG and text
-            const Text(
-              'UpTodo',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 40,
-                fontWeight: FontWeight.bold,
+
+    return  Scaffold(
+      backgroundColor: Color(0xFF121212),
+      body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SvgPicture.asset(
+                'assets/images/Group 151.svg',
+                semanticsLabel: 'uptodo SVG Image',
+                height: 150,
+                width: 100,
               ),
-            ),
-          ],
-        ),
+              const SizedBox(height: 10), // Adding some space between SVG and text
+              const Text(
+                'UpTodo',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+      ),
     );
   }
 }
