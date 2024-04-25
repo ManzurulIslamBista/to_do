@@ -100,7 +100,7 @@ class _LogInPageState extends State<LogInPage> {
                           .loginUser(uname: uname, password: pass);
                       if (loggedIn) {
                         _showSuccessSnackBar(context);
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => UserLogedPage()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => UserLoggedPage()));
                       } else {
                         _showErrorSnackBar(context);
                       }

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:to_do/providers/sql_helper.dart';
 import 'package:to_do/views/intrologo.dart';
 import 'package:to_do/views/main_intro_page.dart';
+import 'package:to_do/views/user_loged_page.dart';
 
 void main() {
   runApp(
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF121212)),
         useMaterial3: true,
       ),
+      // home: UserLoggedPage(),
       home: IntroLogo(),
     );
   }

@@ -45,6 +45,12 @@ dev_dependencies:
   uuid: ^3.0.6
   provider: ^6.1.1
   path_provider: ^2.0.15
+  date_picker_plus: ^2.1.0
+  flutter_spinner_time_picker: ^0.2.1
+  flutter_time_picker_spinner:
+  flex_color_picker: ^3.3.1
+  image_picker: ^1.0.7
+  flutter_advanced_calendar: ^1.4.1
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

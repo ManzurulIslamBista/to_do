@@ -16,27 +16,12 @@ class _UserAppBarState extends State<UserAppBar> {
   Widget build(BuildContext context) {
     return AppBar(
       title: Center(child: Text("Index",style: TextStyle(color: Colors.white),)),
-      leading: PopupMenuButton<String>(
-        icon: Icon(Icons.abc_rounded),
-                 iconColor: Colors.white,
-                onSelected: (value) {
-                  // Handle menu item selection
-                },
-                itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
-                  PopupMenuItem<String>(
-                    value: 'menu_item_1',
-                    child: Text('Menu Item 1'),
-                  ),
-                  PopupMenuItem<String>(
-                    value: 'menu_item_2',
-                    child: Text('Menu Item 2'),
-                  ),
-                  PopupMenuItem<String>(
-                    value: 'menu_item_3',
-                    child: Text('Menu Item 3'),
-                  ),
-                ],
-              ),
+      leading: ImageIcon(
+        AssetImage(
+            "assets/images/sort.png"),
+        size: 24,
+        color: Color(0xFFFFFFFF),
+      ),
       backgroundColor: const Color(0xFF121212),
       actions: [
         IconButton(
